@@ -23,14 +23,18 @@ body{
     margin:0;
     padding:10px;
     box-sizing: border-box;
+    display: -webkit-flex;
+    justify-content: space-between;
+
 }
 
 
 .paragrafo{
+    position: relative;
     margin-left: 65%;
     font-family: 'Hind', sans-serif;
     padding-right: 1%;
-font-weight: 1em;
+    font-weight: 1em;
     width: 20%;
     border-color: rgb(7, 43, 31);
     margin-right: 10%;
