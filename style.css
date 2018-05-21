@@ -1,0 +1,53 @@
+
+.container {
+    position: relative;
+    text-align: center;
+
+
+}
+
+
+.centered {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    right: 0%;
+}
+
+
+body{
+
+    margin:0;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+
+.paragrafo{
+    margin-left: 65%;
+    font-family: 'Hind', sans-serif;
+    padding-right: 1%;
+font-weight: 1em;
+    width: 20%;
+    border-color: rgb(7, 43, 31);
+    margin-right: 10%;
+}
+
+.titolo{
+    color: black;
+    background-color: none;
+    font-weight: bold;
+    font-family: 'Hind', sans-serif;
+    border-color: rgb(7, 43, 31);
+
+}
+
+.testo{
+    font-weight: lighter;
+    color: black
+    border-color: rgb(7, 43, 31);
+
+}
