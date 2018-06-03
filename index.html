@@ -21,9 +21,9 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RIFOTOGRAFIA</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DOCUMENTAZIONE</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATTAMI</a>
+    <a href="#rifotografia" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RIFOTOGRAFIA</a>
+    <a href="#documentazione" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DOCUMENTAZIONE</a>
+    <a href="#contattami" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATTAMI</a>
     <div class="w3-dropdown-hover w3-hide-small">
     </div>
     <a href="#" class="w3-button w3-hide-small w3-right w3-padding-large">La piazza di Cantù </a>
@@ -45,9 +45,12 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="progetto">
     <h2 class="w3-wide">IL PROGETTO</h2>
     <p class="w3-opacity"><i>La piazza di Cantù</i></p>
-    <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="w3-justify">La piazza di Cantù è un luogo che ha subito diverse modifiche nel tempo. La più sostanziale riguarda
+      la viabilità. La foto del 1956 mostra una piazza che permette di posteggiare le auto al suo interno, mentre la fotografia 
+      attuale mostra una piazza resa pedonale. Questa riorganizzazione ha cambiato le abitudini dei cittadini ed il modo di 
+      vivere nella città. Invito a lasciare un commento su come vivete voi la piazza.
+   
+    </p>
     <div class="w3-row w3-padding-32">
       <div class="w3-half">
         <p>1956</p>
@@ -66,7 +69,7 @@ body {font-family: "Lato", sans-serif}
    <div class="w3-black" id="rifotografia">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide w3-center">RIFOTOGRAFIA</h2>
-      <p class="w3-opacity w3-center"><i></i></p><br>
+      <p class="w3-opacity w3-center"><i>Clicca sull'immagine o muovi il mouse da sinistra a destra</i></p><br>
 
       <div style="width: 100%; position: relative; text-align: center;" >
       <div class="container" id="container">
@@ -80,7 +83,7 @@ body {font-family: "Lato", sans-serif}
 
       <!-- documentazione -->
       <section>
-          <div class="w3-white" id="tour">
+          <div class="w3-white" id="documentazione">
               <div class="w3-container w3-content w3-padding-64" style="max-width:800px;">
                 <h2 class="w3-wide w3-center">DOCUMENTAZIONE</h2>
                 <p class="w3-opacity w3-center"><i></i></p><br>
@@ -191,7 +194,7 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: marta.cattaneo.96@gmail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+        <form action="form-to-email.php" method="post" enctype="text/plain" target="_blank" name="myemailform">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
               <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -201,8 +204,17 @@ body {font-family: "Lato", sans-serif}
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-white w3-section w3-right" type="submit">SEND</button>
+          <button class="w3-button w3-white w3-section w3-right" type="submit">INVIO</button>
         </form>
+        <script language="JavaScript">
+          // Code for validating the form
+          // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+          // for details
+          var frmvalidator  = new Validator("myemailform");
+          frmvalidator.addValidation("name","req","Please provide your name"); 
+          frmvalidator.addValidation("email","req","Please provide your email"); 
+          frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+          </script>
       </div>
     </div>
   </div>
